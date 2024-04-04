@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap'); 
 
-
     :root{
         --cor-de-fundo: #1E1E1E;
         --verde: #6FFF57;
@@ -29,7 +28,7 @@ body{
 .titulo-principal{
     text-align: left;
     width: 100%;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .titulo-principal span {
@@ -45,6 +44,7 @@ body{
     padding: 1em;
     font-size: 18px;
     align-items: center;
+    width: 100%;
 }
 
 .botao {
@@ -79,9 +79,9 @@ body{
 .abas-textos{
         background-color: var(--texto-fundo);
         padding: 40px;
-    }
+        border-radius: 0 0 40px 40px;
+}
     
-
 .abas-textos{
     background-color: var(--texto-fundo);
     padding: 40px;
@@ -100,7 +100,7 @@ body{
     text-align: center;
 }
 
-.aba-conteudo-titulo-segundario{
+.aba-conteudo-titulo-secundario{
     text-align: center;
     color: var(--verde);
     text-transform: uppercase;
