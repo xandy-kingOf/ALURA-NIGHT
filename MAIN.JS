@@ -1,5 +1,5 @@
 const botoes = document.querySelectorAll(".botao");
-const textos = document.querySelectorAll('.aba-conteudo');
+const textos = document.querySelectorAll(".aba-conteudo");
 
 for(let i=0;i <botoes.length;i++){
     botoes[i].onclick = function(){
@@ -23,9 +23,6 @@ const tempoObjetivo4 = new Date("2024-10-30T00:00:00");
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
 
-contadores[0].textContent = calculaTempo(tempo[0]);
-contadores[1].textContent = calculaTempo(tempoObjetivo2);
-
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
     let tempoFinal = tempoObjetivo - tempoAtual;
@@ -37,6 +34,22 @@ function calculaTempo(tempoObjetivo) {
     segundos %= 60;
     minutos %= 60;
     horas %=24;
+    if (tempoFinal > 0){
+        return dias + " dias " + horas + " horas " + minutos + " minutos " + segunos + " segundos ";
+    } else {
+        return "Prazo Finalizado";
+    }
 
-    return dias + " dias " + horas + " horas " + minutos + " minutos " + segunos + " segundos ";
 }
+
+function atualizaCronometro(){
+    for (let i=0; i<contadores.length;i++){
+        contadores[i].textContent = calculaTempo(tempo[1]);
+    }
+}
+function comecaCronometro(){
+atualizaCronometro();
+setInterval(atualizaCronometro,1000);
+}
+
+//comecaCronometro();
