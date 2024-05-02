@@ -68,7 +68,7 @@ body{
 }
 
 .botoes {
-    display: block;
+    display:block;
 }
 
 .botao.ativo{
@@ -105,7 +105,10 @@ body{
     color: var(--verde);
     text-transform: uppercase;
 }
-
+.contador{
+    font-size: 20px;
+    text-align: center;
+}
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;
